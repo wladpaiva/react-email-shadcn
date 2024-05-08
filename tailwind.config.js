@@ -2,10 +2,7 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './emails/**/*.{ts,tsx}'
   ],
   prefix: "",
   theme: {
@@ -18,6 +15,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        // inlined styles work
+        'foreground-replaced': "hsl(222.2 84% 4.9%)",
+
+        // css variables don't
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
