@@ -19,6 +19,20 @@ export const VercelInviteUserEmail = () => {
               You have been invited to join the team <strong>acme</strong> on
               Vercel.
             </Text>
+
+            {/* testing css variable */}
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
+                :root {
+                  --my-text-color: red;
+                }
+                `,
+              }}
+            />
+            <Text className="text-[color:var(--my-text-color)]">
+              with css variable
+            </Text>
           </Container>
         </Body>
       </Tailwind>
